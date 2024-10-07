@@ -22,5 +22,13 @@
   - name: lower case
     ansible.builtin.debug:
       msg: "{{ greetings | lower }}"
-           
+
+- name: remove duplicates
+  hosts: localhost
+  vars:
+    numbers: [1, 2, 2, 3, 4, 4, 5]
+  tasks:
+  - name: remove duplicates
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}"             
             
