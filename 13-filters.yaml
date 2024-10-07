@@ -3,7 +3,7 @@
   tasks:
   - name: print default value
     ansible.builtin.debug:
-      msg: "Hello {{coures}} | default '(Terraform)' "
+      msg: "Hello {{coures | default'(Terraform)' }}"
 
 - name: upper case
   hosts: localhost
